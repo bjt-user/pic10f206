@@ -8,7 +8,7 @@
     ;project properites -> PICkit 4 -> Power -> set checkbox "power target circuit from PICkit 4"AND voltage level: 5V
     ;
     ;the file extension must be .S for preprocessing the file (which is probably needed for the #include <xc.inc>
-    ;you can't add .S source files from the menu, so you have to rename the file to .S
+    ;you can't add .S source files from the menu, so you have to rename the file to .S (outside the IDE in a file explorer)
     ;
     ; Depends on files:
     ;   <InstallPathVaries>\xc8\v2.20\pic\include\xc.inc
