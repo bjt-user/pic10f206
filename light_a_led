@@ -9,6 +9,7 @@
     ;
     ;the file extension must be .S for preprocessing the file (which is probably needed for the #include <xc.inc>
     ;you can't add .S source files from the menu, so you have to rename the file to .S (outside the IDE in a file explorer)
+    ;(you also have to restart the IDE to see the renaming effect)
     ;
     ; Depends on files:
     ;   <InstallPathVaries>\xc8\v2.20\pic\include\xc.inc
