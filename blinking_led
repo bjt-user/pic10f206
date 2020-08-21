@@ -51,7 +51,7 @@ Start:
 	
 Loop:
     bsf 06h, 1
-    ;gpio is at 06h ;GP1 is bit 1, so I try 1 (could also try 01h)
+    ;gpio is at 06h ;GP1 is bit 1 (could also try 01h)
     call Delay
     bcf 06h, 1 ;turn LED off again
     call Delay
