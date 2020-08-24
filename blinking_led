@@ -32,14 +32,12 @@
     ;
     config MCLRE = OFF, CP = OFF, WDTE = OFF
      
-    PSECT   StartCode,class=CODE,delta=2
-        global  Start
 Start:
     movlw 11000000B
     option		;to turn off T0CKI
 
-    movlw 00000000B
-    movwf 05h	 ;to turn off FOSC4 from GPI2
+    movlw 00000000B  ;center frequency and turn fosc4 off
+    movwf 05h	     ;to turn off FOSC4 from GPI2
     ;osccal register is at 05h
 
     movlw 01110001B	 ;bit 3 to 0 for turning comparator off
@@ -58,12 +56,12 @@ Loop:
     goto Loop ;loop forever
 	
 Delay:
-    movlw 162 ;put the decimal number 162 into w
+    movlw 100 ;put the decimal number 100 into w
     movwf 0Ah
     ;register 0Ah should be a general purpose register that I can use
     ;to put in values
     movwf 0Bh
-    ;put 162 in 0Bh as well
+    ;put 100 in 0Bh as well
 Delay_Loop:
     DECFSZ 0Ah, 1
     ;decrement the register and store the result in itself
